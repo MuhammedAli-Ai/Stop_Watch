@@ -1,0 +1,83 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  /* Neon Glowing Header */
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #00f2fe, 0 0 20px #4facfe, 0 0 40px #00f2fe;
+    animation: glowPulse 2s infinite alternate;
+  }
+  
+  @keyframes glowPulse {
+    from {
+      text-shadow: 0 0 10px #00f2fe, 0 0 20px #4facfe, 0 0 40px #00f2fe;
+    }
+    to {
+      text-shadow: 0 0 20px #4facfe, 0 0 40px #00f2fe, 0 0 80px #4facfe;
+    }
+  }
+  
+  /* Futuristic Buttons */
+  button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Button Glow Effects */
+  button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, #00f2fe, #4facfe, #00f2fe);
+    transform: rotate(45deg);
+    transition: 0.6s;
+    opacity: 0;
+  }
+  button:hover::before {
+    opacity: 0.2;
+    filter: blur(25px);
+  }
+  button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 25px #00f2fe, 0 0 50px #4facfe;
+  }
+  
+  /* Individual Button Colors */
+  button:nth-child(1) { background: rgba(76, 175, 80, 0.2); box-shadow: 0 0 15px #4caf50; } /* Start */
+  button:nth-child(2) { background: rgba(243, 156, 18, 0.2); box-shadow: 0 0 15px #f39c12; } /* Pause */
+  button:nth-child(3) { background: rgba(231, 76, 60, 0.2); box-shadow: 0 0 15px #e74c3c; } /* Reset */
+  
+  /* Hover Glow Intensifies */
+  button:nth-child(1):hover { box-shadow: 0 0 30px #4caf50, 0 0 60px #4caf50; }
+  button:nth-child(2):hover { box-shadow: 0 0 30px #f39c12, 0 0 60px #f39c12; }
+  button:nth-child(3):hover { box-shadow: 0 0 30px #e74c3c, 0 0 60px #e74c3c; }
+  
